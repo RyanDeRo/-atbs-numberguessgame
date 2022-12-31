@@ -4,11 +4,16 @@ randomint = random.randint(1,20)
 
 for n in range(5):
     print('Take a guess')
-    guessint = input()
-    if int(guessint) > randomint:
+    guessint = int(input())
+    if guessint > randomint:
             print('Too high')
     elif int(guessint) < randomint:
             print('Too low')
     else:
-        print('you got it!')
+        print('You got it! ')
         break
+    
+if guessint == randomint:
+    print('You took ' + str(n) + ' guesses!')
+else:
+    print('Try again next time')
